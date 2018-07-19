@@ -1,5 +1,7 @@
 # Anesthesia Plans
 
+![Swift 4](https://img.shields.io/badge/Swift-4-orange.svg?style=flat)
+
 This app showcases some of the `MVVM` architecture principles.
 
 ## Features
