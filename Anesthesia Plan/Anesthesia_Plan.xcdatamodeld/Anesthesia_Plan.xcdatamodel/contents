@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Choice" representedClassName="Choice" syncable="YES" codeGenerationType="class">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MultiChoice" inverseName="choices" inverseEntity="MultiChoice" syncable="YES"/>
+    </entity>
+    <entity name="FreeText" representedClassName="FreeText" parentEntity="Question" syncable="YES" codeGenerationType="class">
+        <attribute name="hint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="input" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MultiChoice" representedClassName="MultiChoice" parentEntity="Question" syncable="YES" codeGenerationType="class">
+        <attribute name="layout" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mode" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="choices" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Choice" inverseName="question" inverseEntity="Choice" syncable="YES"/>
+    </entity>
+    <entity name="Plan" representedClassName="Plan" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Question" inverseName="plan" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
+        <attribute name="problem" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plan" inverseName="questions" inverseEntity="Plan" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Question" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="FreeText" positionX="-18" positionY="36" width="128" height="75"/>
+        <element name="MultiChoice" positionX="9" positionY="72" width="128" height="90"/>
+        <element name="Choice" positionX="27" positionY="81" width="128" height="90"/>
+        <element name="Plan" positionX="45" positionY="99" width="128" height="75"/>
+    </elements>
+</model>

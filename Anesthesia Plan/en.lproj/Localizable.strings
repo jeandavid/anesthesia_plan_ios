@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Anesthesia Plan
+
+  Created by Jean-David Morgenstern-Peirolo on 7/1/18.
+  Copyright © 2018 Jean-David Morgenstern-Peirolo. All rights reserved.
+*/
+
+"PlanCellMode.TodayTime" = "Today, %@";
+"PlanCellMode.YesterdayTime" = "Yesterday, %@";
+
+"HomeViewController.Title" = "תוכניות הרדמה";
+"HomeViewController.DeleteButton.Title.Default" = "Delete";
+"HomeViewController.DeleteButton.Title.Counter" = "Delete (%d)";
+
+"DeletedConfirmView.Title" = "Deleted";
+"SavedConfirmView.Title" = "Saved";
+
+"OkActionTitle" = "OK";
+"CancelActionTitle" = "Cancel";
+"DeleteActionTitle" = "Delete";
+
+"PlanDetailViewController.DeleteAlert.Message" = "Are you sure you want to delete this treatment plan?";
